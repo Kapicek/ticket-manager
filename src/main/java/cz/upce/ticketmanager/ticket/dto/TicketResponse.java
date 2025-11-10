@@ -9,5 +9,6 @@ public record TicketResponse(
         String title,
         TicketType type,
         TicketPriority priority,
-        TicketState state
+        TicketState state,
+        Long assigneeId
 ) {}

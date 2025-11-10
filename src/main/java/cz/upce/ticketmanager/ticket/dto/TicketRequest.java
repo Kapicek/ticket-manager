@@ -10,5 +10,6 @@ public record TicketRequest(
         @NotBlank @Size(min = 1, max = 160) String title,
         TicketType type,
         TicketPriority priority,
-        TicketState state
+        TicketState state,
+        Long assigneeId
 ) {}

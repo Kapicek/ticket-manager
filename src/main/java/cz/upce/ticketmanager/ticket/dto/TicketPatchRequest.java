@@ -8,6 +8,7 @@ public record TicketPatchRequest(
         String title,
         TicketType type,
         TicketPriority priority,
-        TicketState state
+        TicketState state,
+        Long assigneeId
 ) {}
 

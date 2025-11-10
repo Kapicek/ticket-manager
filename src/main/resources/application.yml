@@ -2,20 +2,19 @@ server:
   port: 8080
 
 spring:
-  datasource:
-    url: jdbc:h2:file:./data/ticketdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate.format_sql: true
+      hibernate.jdbc.time_zone: UTC
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+logging:
+  level:
+    org.springframework.security: INFO
 
 app:
   jwt:
@@ -23,7 +22,3 @@ app:
     expiration-minutes: 15
   reset:
     code-expiration-minutes: 10
-
-logging:
-  level:
-    org.springframework.security: INFO

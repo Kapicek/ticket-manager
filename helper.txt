@@ -1,0 +1,12 @@
+swagger http://localhost:8081/swagger-ui.html
+db http://localhost:5050/browser/ ->
+    Host name/address: db
+    Port: 5432
+    Username/Password: tm
+elastic http://localhost:5601/
+
+
+commandy:
+
+docker compose up -d --build app
+npm start

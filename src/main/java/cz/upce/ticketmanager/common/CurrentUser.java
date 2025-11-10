@@ -13,3 +13,4 @@ public class CurrentUser {
         return users.findByUsername(auth.getName()).orElseThrow();
     }
 }
+
